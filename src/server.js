@@ -1,5 +1,8 @@
 // src/server.js
 
+//I used dotenv npm package to password protect my database, so in README must tell people to create a .env file in the root to link and password protect their own database
+require('dotenv').config()
+
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -14,6 +17,8 @@ mongoose.connection.openUri(`mongodb://${config.db.username}:${config.db.passwor
 
 // Import all models
 require('./models/file.model.js');
+
+
 
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
