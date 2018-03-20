@@ -1,7 +1,7 @@
 // src/config/index.js
 
 
-// onced again, I used dotenv to password protect my database password. In README file, require anyone that clones project to create a .env file of their own, with their own database host, username, and password. My .env file is in my .gitignore. I will provide my password to Brian or Code Louisville rep so they can see my data on the localhost:3030
+// I used dotenv to password protect my mLab database password. In the README file, require anyone that clones project to create a .env file of their own, with their own database host, username, and password. My .env file is in my .gitignore. I will provide my password to Brian or Code Louisville rep so they can see my data on the localhost:3030 for the purpose of this project.
 module.exports = {
     appName: 'Anime Rater',
     port: 3030,

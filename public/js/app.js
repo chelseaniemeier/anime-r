@@ -30,11 +30,13 @@ function getFiles() {
     data = data || {};
   
     const file = {
+      image: data.image || '',
       title: data.title || '',
       description: data.description || '',
       _id: data._id || '',
     };
   
+    $('#file-image').val(file.image);
     $('#file-title').val(file.title);
     $('#file-description').val(file.description);
     $('#file-id').val(file._id);
@@ -55,6 +57,7 @@ function getFiles() {
     console.log("Thanks for the recommendation!");
   
     const fileData = {
+      image: $('#file-image').val(),
       title: $('#file-title').val(),
       description: $('#file-description').val(),
       _id: $('#file-id').val(),
@@ -82,7 +85,7 @@ function getFiles() {
         toggleAddFileFormVisibility();
       })
       .fail(function(error) {
-        console.log("Failures at posting, we are", error);
+        console.log("Oops, we failed at posting your anime!", error);
       })
   
     console.log("Your file data", fileData);
@@ -121,5 +124,6 @@ function getFiles() {
         console.log("I'm not dead yet!", error);
       })
   }
+
 
   refreshFileList();

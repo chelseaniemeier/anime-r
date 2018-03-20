@@ -6,6 +6,7 @@ main styles
 * {
     font-family: 'Roboto Condensed', sans-serif;
     box-sizing: border-box;
+   
 }
 
 body {
@@ -23,16 +24,9 @@ img {
     width: 100%;
 }
 
-
-/****************
-Anime list container
-*****************/
-
-#list-container li {
-    margin-top: 10px;
-    background-color: rgb(189, 232, 34);
+.container {
+    width: 85%;
 }
-
 
 
 /****************
@@ -48,6 +42,7 @@ Header on Homepage Wrapper -- Soot sprites!
     rgba(51, 52, 53, 0.77) url(../img/sootsprite.jpg) center repeat;
     background-attachment: fixed;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -58,12 +53,64 @@ Header on Homepage Wrapper -- Soot sprites!
     width: 100%;
     text-align: center;
     font-size: 4.5em;
-    padding: 5% 5%;
+    padding: 2% 5% 0;
     color: rgb(189, 232, 34);
     font-weight: 700;
     text-transform: uppercase;
+    
+}
+
+.wrapperMainHeader h2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    padding: 0 5% 2%;
+    color: #fff;
+    font-weight: 700;
 }
 
 /******************
 Add file form
 *******************/
+
+
+#add-file-form {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+#add-file-button {
+    margin-top: 10px;
+}
+
+.panel {
+    border: none;
+}
+
+.form-group {
+    width: 80%;
+}
+
+
+/****************
+Anime list container
+*****************/
+
+#list-container .card {
+    margin-top: 20px;
+    background-color: rgb(219, 225, 198);
+    /* display: grid; */
+}
+
+.card-img-top {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body span button {
+    padding: 5px 5px;
+    margin: 10px 0 10px 10px;
+}

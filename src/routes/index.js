@@ -37,6 +37,7 @@ const mongoose = require('mongoose');
     const fileData = {
       title: req.body.title,
       description: req.body.description,
+      image: req.body.image,
     };
   
     File.create(fileData, function(err, newFile) {
@@ -64,6 +65,7 @@ const mongoose = require('mongoose');
     
       file.title = req.body.title;
       file.description = req.body.description;
+      file.image = req.body.image;
     
       file.save(function(err, savedFile) {
         if (err) {
