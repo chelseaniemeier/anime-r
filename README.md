@@ -1,16 +1,17 @@
 # anime-r
-Anime Rater App
+Anime Recommendation/Rater App
+
 Project title: Anime Recommendations
 
 Motivation: The purpose of my project was to create an app/webpage where people can go visit the page and recommend their favorite/least favoriate anime shows. They can add an anime that they like (or dislike) and then leave a description of the show, along with a rating.
 
-Build status: I've built the basics for the purpose of this project, but plan to build out some of the features of this project to a larger scale site that is live to the public.
+Build status: I've built the basics for the purpose of this project, but plan to build out some of the features of this project to a larger scale site that is live to the public. Also want to build comments section.
 
 Technology used: I used html, css, javascript/jquery, mLab, mongoose, express, handlebars.
 
 Features: Your basic CRUD app that can Create, Read, Update & Delete.
 
-Installation for Code Louisville mentors/leaders who are grading this: First you need to download the repository. Open up http://localhost:3030/ in your browser. Open up your terminal and navigate to the root folder of this project. If you type "npm start" in the terminal, then refresh the browser, you will see there is no data showing. This is because I used dotenv to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the .env file that holds the password information. The .env needs to be in the root directory. This will allow the Code Louisville viewer to see my data on localhost:3030 for the purpose of this project.
+Installation for Code Louisville mentors/Brian: If you do not yet have Nodemon, please make sure to install in globally on your computer. Then you need to download this repository. Open up http://localhost:3030/ in your browser. In your terminal, navigate to the root folder of this project. If you type "npm start" in the terminal, it will begin setting up the local server. Wait till it says "Anime Rater is listening on port 3030" in the terminal. Then refresh the browser, you will see there is no data showing. This is because I used dotenv to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the .env file that holds the password information. The .env needs to be in the root directory. This will allow the Code Louisville viewer to see the project data in the browser on localhost:3030 for the purpose of this project.
 
 Project by: Chelsea Niemeier
 
