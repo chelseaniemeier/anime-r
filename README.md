@@ -11,7 +11,15 @@ Technology used: I used html, css, javascript/jquery, mLab, mongoose, express, h
 
 Features: Your basic CRUD app that can Create, Read, Update & Delete.
 
-Installation for Code Louisville mentors/Brian: If you do not yet have Nodemon, please make sure to install in globally on your computer. Then you need to download this repository. Open up http://localhost:3030/ in your browser. In your terminal, navigate to the root folder of this project. If you type "npm start" in the terminal, it will begin setting up the local server. Wait till it says "Anime Rater is listening on port 3030" in the terminal. Then refresh the browser, you will see there is no data showing. This is because I used dotenv to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the .env file that holds the password information. The .env needs to be in the root directory. This will allow the Code Louisville viewer to see the project data in the browser on localhost:3030 for the purpose of this project.
+Installation for Code Louisville mentors/Brian: 
+-If you do not yet have Nodemon, please make sure to install in globally on your computer. 
+-Then you need to download this repository. 
+-In your terminal, navigate to the root folder of this project. 
+-Run ‘npm install’ to install necessary packages.
+-Type "npm start" in the terminal, it will begin setting up the local server. Wait till it says "Anime Rater is listening on port 3030" in the terminal.
+-Open up http://localhost:3030/ in your browser. You will see there is no data showing (yet!). This is because I used dotenv to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the .env file that holds the login/password information. The .env needs to be in the root directory. This will allow the Code Louisville viewer to see the project data in the browser on localhost:3030 for the purpose of this project.
+-Refesh http://localhost:3030/ in your browser. The database should be showing up now.
+-Have fun and recommend a show you like to watch!
 
 Project by: Chelsea Niemeier
 
