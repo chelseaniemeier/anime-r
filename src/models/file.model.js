@@ -5,6 +5,7 @@ const FileSchema = new mongoose.Schema({
   title: String,
   description: String,
   image: String,
+  rating: String,
   created_at: { type: Date, default: Date.now },
   deleted: {type: Boolean, default: false}
 });
@@ -23,7 +24,7 @@ File.count({}, function(err, count) {
     if (err) {
         throw err;
     }
-    console.log("DB seeded")
+    console.log("DB seeded with tres animes!")
     });
   });
 

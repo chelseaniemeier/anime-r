@@ -1,3 +1,5 @@
+// These functions compile the data from the mlab database and then displays the data collection in the list-container div in the html
+
 function getFiles() {
     return $.ajax('/api/file')
       .then(res => {
@@ -25,7 +27,6 @@ function getFiles() {
       })
   }
 
-
   function setFormData(data) {
     data = data || {};
   
@@ -33,21 +34,25 @@ function getFiles() {
       image: data.image || '',
       title: data.title || '',
       description: data.description || '',
+      rating: data.rating || '',
       _id: data._id || '',
     };
   
     $('#file-image').val(file.image);
     $('#file-title').val(file.title);
     $('#file-description').val(file.description);
+    $('#file-rating').val(file.rating);
     $('#file-id').val(file._id);
   }
+
+
+  // These functions set up the Add Anime button/form 
 
   function handleAddFileClick() {
     console.log("There are too many animes to watch...");
     setFormData({});
     toggleAddFileFormVisibility();
   }
-  
 
   function toggleAddFileFormVisibility() {
     $('#form-container').toggleClass('hidden');
@@ -60,9 +65,11 @@ function getFiles() {
       image: $('#file-image').val(),
       title: $('#file-title').val(),
       description: $('#file-description').val(),
+      rating: $('#file-rating').val(),
       _id: $('#file-id').val(),
     };
   
+// If there is a file already in existance, it will update the information. If there isn't an existing file/id in the data, the form will post/add a new anime    
     let method, url;
     if (fileData._id) {
       method = 'PUT';
@@ -80,7 +87,7 @@ function getFiles() {
       contentType : 'application/json',
     })
       .done(function(response) {
-        console.log("We have posted the data");
+        console.log("We have posted the anime");
         refreshFileList();
         toggleAddFileFormVisibility();
       })
@@ -88,12 +95,14 @@ function getFiles() {
         console.log("Oops, we failed at posting your anime!", error);
       })
   
-    console.log("Your file data", fileData);
+    console.log("Your anime data", fileData);
   }
   
   function cancelFileForm() {
     toggleAddFileFormVisibility();
   }
+
+// Finds and edits file
 
   function handleEditFileClick(id) {
     const file = window.fileList.find(file => file._id === id);
@@ -103,11 +112,15 @@ function getFiles() {
     }
   }
 
+// "Deletes" the specified file. It's a soft delete, so the data could be recovered.
+
+
   function handleDeleteFileClick(id) {
-    if (confirm("Are you sure?")) {
+    if (confirm("Are you sure you want to remove this anime? What did this anime ever do to you?")) {
       deleteFile(id);
     }
   }
+
 
   function deleteFile(id) {
     $.ajax({
@@ -117,11 +130,11 @@ function getFiles() {
       contentType : 'application/json',
     })
       .done(function(response) {
-        console.log("File", id, "is DOOMED!!!!!!");
+        console.log("File", id, "is kicked off the island.");
         refreshFileList();
       })
       .fail(function(error) {
-        console.log("I'm not dead yet!", error);
+        console.log("Not forgotten yet!", error);
       })
   }
 

@@ -1,6 +1,6 @@
 // src/server.js
 
-//I used dotenv npm package to password protect my database, so in README must tell people to create a .env file in the root to link and password protect their own database
+//I used dotenv npm package to password protect my database, see README for more information.
 require('dotenv').config()
 
 const path = require('path');
@@ -12,7 +12,7 @@ const router = require('./routes');
 const mongoose = require('mongoose');
 
 
-// Connect to MongoDB and create/use database as configured
+// Connect to MongoDB and create/use database as configured. I am using mLab.
 mongoose.connection.openUri(`mongodb://${config.db.username}:${config.db.password}@${config.db.host}/${config.db.dbName}`);
 
 // Import all models
@@ -27,6 +27,7 @@ app.use(express.static(publicPath));
 app.use('/api', router);
 
 
+//Go, Baby, Go!
 
 app.listen(config.port, function() {
 console.log(`${config.appName} is listening on port ${config.port}`);

@@ -38,6 +38,7 @@ const mongoose = require('mongoose');
       title: req.body.title,
       description: req.body.description,
       image: req.body.image,
+      rating: req.body.rating
     };
   
     File.create(fileData, function(err, newFile) {
@@ -63,9 +64,10 @@ const mongoose = require('mongoose');
         return res.status(404).json({message: "File not found"});
       }
     
+      file.image = req.body.image;
       file.title = req.body.title;
       file.description = req.body.description;
-      file.image = req.body.image;
+      file.rating = req.body.rating;
     
       file.save(function(err, savedFile) {
         if (err) {

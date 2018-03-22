@@ -10,8 +10,8 @@ main styles
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin-bottom: 15px;
     background: #000;
 }
@@ -20,12 +20,8 @@ a {
     text-decoration: none;
 }
 
-img {
-    width: 100%;
-}
-
 .container {
-    width: 85%;
+    width: 90%;
 }
 
 
@@ -100,17 +96,31 @@ Anime list container
 
 #list-container .card {
     margin-top: 20px;
-    background-color: rgb(219, 225, 198);
+    background-color: rgb(189, 232, 34);
     /* display: grid; */
 }
 
 .card-img-top {
-    max-height: 300px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
+}
+
+.card-body {
+    
 }
 
 .card-body span button {
     padding: 5px 5px;
     margin: 10px 0 10px 10px;
+}
+
+.card-title {
+    padding: 15px 15px 0 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 5px 15px 0 15px;
 }
