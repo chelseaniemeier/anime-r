@@ -115,12 +115,22 @@ function getFiles() {
   }
 
 // "Deletes" the specified file. It's a soft delete, so the data could be recovered.
-
+// Used Jquery-Confirm to style the delete alert
 
   function handleDeleteFileClick(id) {
-    if (confirm("Are you sure you want to remove this anime? What did this anime ever do to you?")) {
-      deleteFile(id);
-    }
+    $.confirm({
+      title: 'Wait!',
+      content: 'Are you SURE you want to delete this anime?',
+      buttons: {
+          confirm: function () {
+            deleteFile(id)
+          },
+          cancel: function () {
+              $.alert('Canceled!');
+          }
+      },
+      theme: 'supervan',
+    });
   }
 
 
