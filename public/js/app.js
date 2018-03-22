@@ -27,6 +27,8 @@ function getFiles() {
       })
   }
 
+  // Collecting user input data from the add/edit anime form
+
   function setFormData(data) {
     data = data || {};
   
