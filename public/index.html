@@ -66,7 +66,8 @@
 
       </div>
 
-      <!-- Displays all the animes in the database -->
+      <!-- DISPLAYS ALL THE ANIMES IN THE DATABASE -->
+      
       <div id="list-container"></div>
 
     </div>
@@ -83,7 +84,7 @@
                     <div class="card-body">
                       <h5 class="card-title text-uppercase">{{title}}</h5>
                       <p class="card-text">{{description}}</p>
-                      <p class="card-text"><small class="text-muted">I rate this _ <strong>{{rating}}</strong> _ stars!</small></p>
+                      <p class="card-text">I rate this _ <strong>{{rating}}</strong> _ stars!</p>
                       <span>
                           <button type="button" class="btn btn-xs btn-outline-dark" onclick="handleEditFileClick('{{_id}}')">Revise</button>
                           <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Remove</button>
