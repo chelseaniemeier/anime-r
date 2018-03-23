@@ -30,6 +30,6 @@ app.use('/api', router);
 //Go, Baby, Go!
 var port = process.env.PORT || config.port;
 app.listen(port, function() {
-    console.log(`${config.appName} is listening on port ${config.port}`);
+    console.log(`${config.appName} is listening on port ${port}`);
 });
 
