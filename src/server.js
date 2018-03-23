@@ -28,8 +28,8 @@ app.use('/api', router);
 
 
 //Go, Baby, Go!
-
-app.listen(config.port, function() {
-console.log(`${config.appName} is listening on port ${config.port}`);
+var port = process.env.PORT || config.port;
+app.listen(port, function() {
+    console.log(`${config.appName} is listening on port ${config.port}`);
 });
 
