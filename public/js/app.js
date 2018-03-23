@@ -52,12 +52,73 @@ function getFiles() {
 
   function handleAddFileClick() {
     console.log("There are too many animes to watch...");
-    setFormData({});
-    toggleAddFileFormVisibility();
+
+    showAddFileForm({});
   }
 
-  function toggleAddFileFormVisibility() {
-    $('#form-container').toggleClass('hidden');
+  function showAddFileForm(file) {
+    var title = file._id ? "Edit Anime" : "Add Anime";
+    var content = `
+    <div id="form-container" class="panel">
+
+    <form id="add-file-form">
+
+        <input type="hidden" id="file-id" value="" />
+
+        <div class="form-group">
+            <label for="file-image">Anime Picture</label>
+            <input type="text" class="form-control" id="file-image" placeholder="Image Url">
+        </div>
+
+        <div class="form-group">
+          <label for="file-title">Anime Title</label>
+          <input type="text" class="form-control" id="file-title" placeholder="Title">
+        </div>
+
+        <div class="form-group">
+          <label for="file-description">Short Description</label>
+          <input type="text" class="form-control" id="file-description" placeholder="Description">
+        </div>
+
+        <div class="form-group">
+          <label for="file-rating">Anime Rating</label>
+          <input type="text" class="form-control" id="file-rating" placeholder="Rating">
+        </div>
+
+       
+    </form>
+
+  </div>
+  `;
+  // <button type="button" onclick="submitFileForm()" class="btn btn-success">Post</button>
+  // <button type="button" onclick="cancelFileForm()" class="btn btn-danger">I take it back ^_^</button>
+  
+  console.log(content);
+    $.confirm({
+      title: title,
+
+      content: content,
+      buttons: {
+          formSubmit: {
+              text: 'Submit',
+              btnClass: 'btn-blue',
+              action: submitFileForm
+          },
+          cancel: function () {
+              //close
+          },
+      },
+      onContentReady: function () {
+          // bind to events
+          var jc = this;
+          this.$content.find('form').on('submit', function (e) {
+              // if the user submits the form by pressing enter in the field.
+              e.preventDefault();
+              jc.$$formSubmit.trigger('click'); // reference the button and click it
+          });
+          setFormData(file);
+      }
+  });
   }
 
   function submitFileForm() {
@@ -91,7 +152,6 @@ function getFiles() {
       .done(function(response) {
         console.log("We have posted the anime");
         refreshFileList();
-        toggleAddFileFormVisibility();
       })
       .fail(function(error) {
         console.log("Oops, we failed at posting your anime!", error);
@@ -100,17 +160,17 @@ function getFiles() {
     console.log("Your anime data", fileData);
   }
   
-  function cancelFileForm() {
-    toggleAddFileFormVisibility();
-  }
+  // function cancelFileForm() {
+  //   showAddFileForm();
+  // }
 
 // Finds and edits file
 
   function handleEditFileClick(id) {
     const file = window.fileList.find(file => file._id === id);
     if (file) {
-      setFormData(file);
-      toggleAddFileFormVisibility();
+      // setFormData(file);
+      showAddFileForm(file);
     }
   }
 
