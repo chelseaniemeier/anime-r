@@ -77,7 +77,7 @@ function getFiles() {
 
         <div class="form-group">
           <label for="file-description">Short Description</label>
-          <input type="text" class="form-control" id="file-description" placeholder="Description">
+          <textarea class="form-control" rows="5><input type="text" class="form-control" id="file-description" placeholder="Description"></textarea>
         </div>
 
         <div class="form-group">
