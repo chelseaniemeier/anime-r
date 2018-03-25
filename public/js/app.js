@@ -59,7 +59,7 @@ function getFiles() {
   function showAddFileForm(file) {
     var title = file._id ? "Edit Anime" : "Add Anime";
     var content = `
-    <div id="form-container" class="panel">
+    <div id="form-container">
 
     <form id="add-file-form">
 
@@ -90,8 +90,6 @@ function getFiles() {
 
   </div>
   `;
-  // <button type="button" onclick="submitFileForm()" class="btn btn-success">Post</button>
-  // <button type="button" onclick="cancelFileForm()" class="btn btn-danger">I take it back ^_^</button>
   
   console.log(content);
     $.confirm({
@@ -160,9 +158,6 @@ function getFiles() {
     console.log("Your anime data", fileData);
   }
   
-  // function cancelFileForm() {
-  //   showAddFileForm();
-  // }
 
 // Finds and edits file
 
