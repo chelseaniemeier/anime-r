@@ -1,27 +1,27 @@
 # anime-r
 ### Anime Recommendation/Rater App
 
-####Project title: 
+#### Project title: 
 Anime Recommendations
 
-####Motivation: 
+#### Motivation: 
 The purpose of my project was to create an app/webpage where I can list & recommend my favorite anime shows. I can add an anime that I have watched and then leave a description of the show, along with a rating.
 
-####Build status: 
+#### Build status: 
 I've built the basics for the purpose of this project, but plan to build out some of the features of this project to a larger scale. Eventually I'd like to have a search bar/sorting function, a comments section, and user accounts.
 
-####Technology used: 
+#### Technology used: 
 I used html, css, javascript, jquery, mLab, mongoose, express, handlebars.
 
-####Features: 
+#### Features: 
 Your basic CRUD app that can Create, Read, Update & Delete.
 
-####The app is on a live link, hosted on Heroku: 
+#### The app is on a live link, hosted on Heroku: 
 (https://anime-r.herokuapp.com/)
 
 But if you want to run it locally, here is the following:
 
-####Installation for Code Louisville mentors/Brian: 
+#### Installation for Code Louisville mentors/Brian: 
 1. If you do not yet have Nodemon, please make sure to install it globally on your computer. 
 2. Download this repository. 
 3. In your terminal, navigate to the root folder of this project. 
@@ -31,14 +31,14 @@ But if you want to run it locally, here is the following:
 7. Refesh http://localhost:8080/ in your browser. The database should be showing up now.
 8. Have fun and recommend a show you like to watch!
 
-####Project by: Chelsea Niemeier
+#### Project by: Chelsea Niemeier
 
-####Acknowledgments: 
+#### Acknowledgments: 
 Bootstrap and Jquery contributed to the styling of the project, with custom CSS sprinkled in. Thank you to my Code Louisville mentors as well for helping me with the foundations. 
 
-####MIT License
+#### MIT License
 
-#####Copyright (c) 2018 Chelsea Niemeier
+##### Copyright (c) 2018 Chelsea Niemeier
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
