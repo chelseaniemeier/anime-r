@@ -1,7 +1,7 @@
 # anime-r
 ### Anime Recommendation/Rater App
 
-
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chelseaniemeier/anime-r/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/EasyAsABC123/grunt-standard.svg)](https://github.com/chelseaniemeier/anime-r/issues) 
 
 #### Project title: 
 Anime Recommendations
