@@ -21,15 +21,14 @@ Your basic CRUD app that can Create, Read, Update & Delete.
 
 But if you want to run it locally, here is the following:
 
-#### Installation for Code Louisville mentors/Brian: 
-1. If you do not yet have Nodemon, please make sure to install it globally on your computer. 
-2. Download this repository. 
-3. In your terminal, navigate to the root folder of this project. 
-4. Run `npm install` to install necessary packages.
-5. Type `npm run start_dev` in the terminal, it will begin setting up the local server. Wait till it says ```Anime Recommendations is listening on port 8080``` in the terminal.
-6. Open up (http://localhost:8080/) in your browser. You will see there is no data showing (*yet!*). This is because I used **dotenv** to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the `.env` file that holds the login/password information. The `.env` needs to be in the root directory. This will allow the Code Louisville viewer to see the project data in the browser on (http://localhost:8080/) for the purpose of this project.
-7. Refesh (http://localhost:8080/) in your browser. The database should be showing up now.
-8. Have fun and recommend a show you like to watch!
+#### Installation for Code Louisville mentors/Brian:  
+1. Download this repository. 
+2. In your terminal, navigate to the root folder of this project. 
+3. Run `npm install` to install necessary packages.
+4. Type `npm start` in the terminal, it will begin setting up the local server. Wait till it says ```Anime Recommendations is listening on port 8080``` in the terminal.
+5. Open up (http://localhost:8080/) in your browser. You will see there is no data showing (*yet!*). This is because I used **dotenv** to password protect the mLab database login/password. I will e-mail Brian, or to whom it may concern, the `.env` file that holds the login/password information. The `.env` needs to be in the root directory. This will allow the Code Louisville viewer to see the project data in the browser on (http://localhost:8080/) for the purpose of this project.
+6. Refresh (http://localhost:8080/) in your browser. The database should be showing up now.
+7. Have fun and recommend a show you like to watch!
 
 #### Project by: Chelsea Niemeier
 
