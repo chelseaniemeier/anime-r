@@ -1,6 +1,8 @@
 # anime-r
 ### Anime Recommendation/Rater App
 
+[![Travis](https://travis-ci.org/EasyAsABC123/grunt-standard.svg?branch=master)](https://travis-ci.org/EasyAsABC123/grunt-standard) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![npm (scoped)](https://img.shields.io/npm/v/grunt-standard.svg)](https://www.npmjs.com/package/grunt-standard) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/EasyAsABC123/grunt-standard/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/EasyAsABC123/grunt-standard.svg)](https://github.com/EasyAsABC123/grunt-standard/issues) [![GitHub followers](https://img.shields.io/github/followers/EasyAsABC123.svg?style=social&label=Follow)](https://github.com/EasyAsABC123)
+
 #### Project title: 
 Anime Recommendations
 
