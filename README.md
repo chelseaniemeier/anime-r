@@ -1,5 +1,5 @@
 # anime-r
-Anime Recommendation/Rater App
+### Anime Recommendation/Rater App
 
 Project title: Anime Recommendations
 
